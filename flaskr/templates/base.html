@@ -1,0 +1,30 @@
+<!-- base layout that extends into all other layouts -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} - Flaskr</title> <!-- will change the title displayed in the browser’s tab and window title -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<nav>
+    <h1>Flaskr</h1>
+    <ul>
+        {% if g.user %} <!-- if user is logged in display this -->
+        <li><span>{{ g.user['username'] }}</span></li>
+        <li><a href="{{ url_for('auth.logout') }}"> Log Out </a></li>
+        {% else %}
+        <li><a href="{{ url_for('auth.register') }}">Register</a></li>
+        <li><a href="{{ url_for('auth.login') }}">Log In</a></li>
+        {% endif %}
+    </ul>
+</nav>
+<section class="content">
+    <header>
+        {% block header %}{% endblock %} <!-- will change the title displayed on the page -->
+    </header>
+    {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div> <!-- 'message' displays error messages e.g. 'Username is required.' -->
+    {% endfor %}
+    {% block content %}{% endblock %} <!-- where the content of each page goes, such as the login form or a blog post -->
+</section>
+</html>
