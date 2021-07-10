@@ -18,7 +18,7 @@ $ py -3 -m venv venv
 $ venv\Scripts\activate.bat
 ```
 
-Install Flaskr (Mac):
+Install Flaskr:
 
 ```console
 $ pip install -e .
@@ -31,7 +31,7 @@ $ pip install -e ../..
 $ pip install -e .
 ```
 
-Install Flask 
+If not working, try to install Flask 
 
 ```console
 $ pip install Flask
