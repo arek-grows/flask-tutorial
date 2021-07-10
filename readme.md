@@ -31,7 +31,7 @@ $ pip install -e ../..
 $ pip install -e .
 ```
 
-Install Falsk 
+Install Flask 
 
 ```console
 $ pip install Flask
