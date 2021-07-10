@@ -6,41 +6,41 @@ Follow [flask tutorial to start](https://github.com/pallets/flask/tree/main/exam
 
 Create a virtualenv and activate it (Mac):
 
-```bash
+```console
 $ python3 -m venv venv
 $ . venv/bin/activate
 ```
 
 Or on Windows cmd:
 
-```bash
+```console
 $ py -3 -m venv venv
 $ venv\Scripts\activate.bat
 ```
 
 Install Flaskr (Mac):
 
-```bash
+```console
 $ pip install -e .
 ```
 
 Or if you are using the main branch, install Flask from source before installing Flaskr:
 
-```bash
+```console
 $ pip install -e ../..
 $ pip install -e .
 ```
 
 Install Falsk 
 
-```bash
-pip install Flask
+```console
+$ pip install Flask
 ```
 
 ## Development
 
-```bash
-bash flask-start.sh
+```console
+$ bash flask-start.sh
 ```
 
 Visit http://127.0.0.1:5000/auth/register
