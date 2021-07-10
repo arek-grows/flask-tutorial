@@ -1,0 +1,3 @@
+venv
+flaskr.egg-info
+flaskr/__pycache__
