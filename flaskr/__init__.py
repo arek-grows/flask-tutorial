@@ -1,10 +1,13 @@
 import os
 from flask import Flask
+from flask_scss import Scss
 
 
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
+    Scss(app, static_dir='flaskr/static', asset_dir='flaskr/assets')
+
     app.config.from_mapping(
         SECRET_KEY='dev',
         DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite')
