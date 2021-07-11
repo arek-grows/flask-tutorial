@@ -31,10 +31,11 @@ $ pip install -e ../..
 $ pip install -e .
 ```
 
-If not working, try to install Flask 
+If not working, try to install misisng things: 
 
 ```console
 $ pip install Flask
+$ pip install Flask-Scss
 ```
 
 ## Development
